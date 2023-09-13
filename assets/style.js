@@ -11,6 +11,7 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
+        check : false,
         counter : 0,
         newTask : '',
         listaTodo : [],
@@ -19,11 +20,16 @@ const { createApp } = Vue
     methods: {
         aggiungiTask(){
             //al click aggiungo la task
-            this.counter++
             console.log(this.counter);
             if (this.newTask != '') {
                 this.listaTodo.push(this.newTask)
+                this.counter++
+
             }
-        }
+        },
+        fatto(){
+            this.check = true
+            console.log(this.check);
+        },
     },
   }).mount('#app')

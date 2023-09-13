@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>todolist</title>
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
     <div id="app">
@@ -11,8 +12,9 @@
         <input v-model="newTask" type="text">
         <button @click="aggiungiTask">Aggiungi task</button>
         <ul>
-            <li v-for="toDo in listaTodo">
+            <li :class="check == true ? 'sbarrata'" v-for="toDo in listaTodo">
                 {{toDo}}
+                <button @click="fatto">X</button>
             </li>
         </ul>
 
