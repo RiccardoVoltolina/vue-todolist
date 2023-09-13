@@ -12,8 +12,8 @@
         <input v-model="newTask" type="text">
         <button @click="aggiungiTask">Aggiungi task</button>
         <ul>
-            <li :class="check == true ? 'sbarrata' : ''" v-for="toDo in listaTodo">
-                {{toDo}}
+            <li :class="check == true ? 'sbarrata' : ''" v-for="(toDo,index) in listaTodo">
+                {{toDo.text}}
                 <button @click="fatto">X</button>
             </li>
         </ul>

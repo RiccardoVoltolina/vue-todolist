@@ -14,7 +14,25 @@ const { createApp } = Vue
         check : false,
         counter : 0,
         newTask : '',
-        listaTodo : [],
+        listaTodo : [
+            {
+                text: 'fare la spesa',
+                fatto: false,
+            },
+            {
+                text: 'coccolare il cane',
+                fatto: true,
+            },
+            {
+                text: 'mangiare',
+                fatto: true,
+            },
+            {
+                text: 'finire in tempo i compiti',
+                fatto: false,
+            },
+        ],
+        
       }
     },
     methods: {
@@ -22,7 +40,7 @@ const { createApp } = Vue
             //al click aggiungo la task
             console.log(this.counter);
             if (this.newTask != '') {
-                this.listaTodo.push(this.newTask)
+                this.listaTodo.push({text:this.newTask, check:false}),
                 this.counter++
 
             }
