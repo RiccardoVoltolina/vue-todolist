@@ -11,7 +11,9 @@
         <input v-model="newTask" type="text">
         <button @click="aggiungiTask">Aggiungi task</button>
         <ul>
-            <li>{{listaTodo[0]}}</li>
+            <li v-for="toDo in listaTodo">
+                {{toDo}}
+            </li>
         </ul>
 
     </div>
