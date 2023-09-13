@@ -11,13 +11,17 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
+        counter : 0,
         newTask : '',
         listaTodo : [],
       }
     },
     methods: {
         aggiungiTask(){
+            //al click aggiungo la task
             this.listaTodo.push(this.newTask)
+            this.counter++
+            console.log(this.counter);
         }
     },
   }).mount('#app')
