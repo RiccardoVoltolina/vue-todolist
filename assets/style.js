@@ -45,8 +45,8 @@ const { createApp } = Vue
 
             }
         },
-        fatto(){
-            this.check = true
+        fatto(i){
+            this.listaTodo.splice(i, 1)
             console.log(this.check);
         },
     },
