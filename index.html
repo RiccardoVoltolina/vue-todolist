@@ -14,7 +14,7 @@
         <ul>
             <li :class="toDo.fatto == true ? 'sbarrata' : ''" v-for="(toDo,index) in listaTodo">
                 {{toDo.text}}
-                <button @click="fatto(i)">X</button>
+                <button @click="done(index)">X</button>
             </li>
         </ul>
 
